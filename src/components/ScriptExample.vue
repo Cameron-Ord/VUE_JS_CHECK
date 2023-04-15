@@ -1,37 +1,54 @@
 <template>
-    <div>
+    <span>
+    
+        <h1>I am the script example</h1>
 
-    </div>
+        <div class="container">
+
+            <p>Friends: {{ num_friends }}</p>
+
+            <p v-if="logged_in === true">You are logged in</p>
+
+            <p></p>
+
+            <p></p>
+        </div>
+
+    </span>
 </template>
 
 <script>
+
+
+
+
     export default {
+
+     
+
         data() {
             return {
-                tweets: [`tweet1`, `tweet2`, `tweet3`],
+                names: [`Cameron`, `JSON`, `Brad`, `Jack`],
 
-                num_friends: 2,
-                
-                logged_in: true,
+                num_friends: [1, 14, 0, 30],
 
-                background: `green`
-
-            }
-        },
-        methods: {
-            makeGreen: function(){
-
-                document.body[`style`][`background-color`] = this.background;
+                logged_in: false
             }
         },
 
-        mounted: function(){
-            this.makeGreen();
-        }
 
     }
 </script>
 
 <style scoped>
+
+.container{
+
+    align-items: center;
+
+    justify-items: center;
+
+    display: grid;
+}
 
 </style>
