@@ -9,9 +9,9 @@
 
             <p v-if="logged_in === true">You are logged in</p>
 
-            <p></p>
+            <p v-else>You are NOT logged in!</p>
 
-            <p></p>
+            <p v-for="(tweet, counter) in tweets" :key="counter">{{ tweet }}</p>
         </div>
 
     </span>
@@ -28,7 +28,7 @@
 
         data() {
             return {
-                names: [`Cameron`, `JSON`, `Brad`, `Jack`],
+                tweets: [`Cameron`, `JSON`, `Brad`, `Jack`],
 
                 num_friends: [1, 14, 0, 30],
 
