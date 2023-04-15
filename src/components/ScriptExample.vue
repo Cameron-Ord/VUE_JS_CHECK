@@ -8,7 +8,12 @@
     export default {
         data() {
             return {
-                key: value
+                tweets: [`tweet1`, `tweet2`, `tweet3`],
+
+                num_friends: 2,
+                
+                logged_in: true
+                
             }
         },
     }
